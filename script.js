@@ -100,10 +100,13 @@ window.onload = function() {
       }
     }
   }
-  //search for matches when input has changed
-  input.onchange = function(){search()};
+
   //search for matches when button clicked
-  document.getElementById('search').addEventListener('click', search);
+  document.getElementById('search').addEventListener('click', function(){
+    search();
+  //search for matches when input has changed
+    input.onchange = function(){search()};
+  });
 
   //quit search, show full list
   document.getElementById('cancel').addEventListener('click', function() {
