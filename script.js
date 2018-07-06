@@ -91,21 +91,19 @@ window.onload = function() {
 
   //search task by title
   function search() {
-    input.placeholder = 'Search';
     document.getElementById('cancel').style.display = 'inline';
-    //search for matches when input has changed
-    input.onchange = function() {
-      var search = input.value.toLowerCase();
-      for (i = 0; i < li.length; i++) {
-        task = li[i].getElementsByClassName('task')[0];
-        if (task.innerHTML.toLowerCase().indexOf(search) == -1) {
-          li[i].style.display = "none";
-        }
+    var search = input.value.toLowerCase();
+    for (i = 0; i < li.length; i++) {
+      task = li[i].getElementsByClassName('task')[0];
+      if (task.innerHTML.toLowerCase().indexOf(search) == -1) {
+        li[i].style.display = "none";
       }
-    };
+    }
   }
-
-  document.getElementById('search').addEventListener('mouseup', search);
+  //search for matches when input has changed
+  input.onchange = function(){search()};
+  //search for matches when button clicked
+  document.getElementById('search').addEventListener('click', search);
 
   //quit search, show full list
   document.getElementById('cancel').addEventListener('click', function() {
