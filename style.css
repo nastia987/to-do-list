@@ -1,0 +1,74 @@
+* {
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  width: 90%;
+  max-width: 800px;
+  min-width: 300px;
+  flex-direction: column;
+}
+
+ul {
+  font-size: 20px;
+  padding: 0;
+  flex-direction: column;
+  list-style-type: none;
+}
+
+li {
+  justify-content: space-between;
+  padding: 10px;
+}
+
+ul li:nth-child(odd) {
+  background: #e9ecef;
+}
+
+.jumbotron {
+  flex-direction: column;
+}
+
+#cancel {
+  display: none;
+}
+
+#input-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.taskDate {
+  width: fit-content;
+  font-size: 12pt;
+  padding-right: 10px;
+}
+
+.task {
+  width: 60%;
+  justify-content: flex-start;
+  overflow-wrap: break-word;
+  padding-right: 15px;
+}
+
+.btnup, .btndown, .remove {
+  padding: 0px 5px;
+  height: min-content;
+}
+
+.checked {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+.remove:hover {
+  background-color: #ff3737;
+  color: white;
+}
+
+.btnup:hover, .btndown:hover {
+  background-color: #bbdbff;
+  color: white;
+}
