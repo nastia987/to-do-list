@@ -32,6 +32,8 @@ ul li:nth-child(odd) {
 
 #cancel {
   display: none;
+  color: #ffffff;
+  background-color: #fe4641;
 }
 
 #input-group {
